@@ -1,0 +1,38 @@
+1: Download the dataset
+Dataset downloaded and extracted under the folder called UCI HAR Dataset
+
+2: Read the data
+features: Feature ID and corresponding name of feature
+
+train_data: Training Data
+
+test_data: Test Data
+
+
+3: Extracts only the measurements on the mean and standard deviation for each measurement
+variable_names:extract only mean and sd of each measurement
+
+4.  Merges the training and the test sets to create one data set
+combined_data: Combined Training and Test Data that is filtered for mean and std
+
+5. Load Data label and combine train and test label
+train_label: Label for training data
+
+test_label: Label for test data
+
+combined_label: Combined label for Training and Test Data with rbind
+
+6. Load Activity
+activity_label: Activity ID and corresponding name of activity
+
+7. Load subject and combine train and test suject
+subject_train<-read.table("UCI HAR Dataset/train/subject_train.txt")
+subject_test<-read.table("UCI HAR Dataset/test/subject_test.txt")
+
+8:Combine Label, subject and data with cbind
+data_label_subject: combine label, subject and data with cbind
+
+9: merge activity labels with data_label_subject
+data_label_subject: merge activity labels with using left join
+
+10: From the data set created at the end of the 4th step, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
